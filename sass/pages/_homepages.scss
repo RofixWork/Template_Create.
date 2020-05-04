@@ -1,0 +1,372 @@
+/*scroll Top*/
+.scroll-top{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+    display: none;
+    i{
+        color: white;
+        background-color: $mainColor;
+        width: 30px;
+        height: 30px;
+        line-height: 27px;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+/*scroll Top*/
+
+/*head*/
+.head{
+    background-image: linear-gradient(rgba(black, .5), rgba(black, .5)), url(../../dist/img/head-bg/hero_1.webp);
+    background-size: cover;
+    position: relative;
+    .over{
+        @include overlay;
+        width: 100%;
+        h1{
+            font-size: 45px;
+            margin: 0;
+        }
+        p{
+            margin: 1% 0;
+            font-size: 18px;
+            font-weight: normal;
+            span{
+                color: $mainColor;
+            }
+        }
+        button.btn{
+            background-color: $mainColor;
+            font-size: 15px;
+            padding: 10px 20px;
+            opacity: .9;
+            //@include transition(opacity)
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+/*head*/
+/*site*/
+.site{
+    padding: 40px 0;
+    .site-title{
+        color: $mainColor;
+        padding: 5px;
+    }
+    .site-desc{
+        font-size: 15.5px;
+        line-height: 1.8;
+        color: $thirtColor;
+    }
+    .site-list{
+        li{
+            line-height: 2.5;
+            color: $thirtColor;
+            .fa-check{
+                color: $mainColor;
+                font-weight: normal;
+            }
+        }
+    }
+}
+/*site*/
+/*work*/
+.work{
+    padding: 40px 0;
+
+    .work-desc{
+        width: 60%;
+        margin: auto;
+        line-height: 1.8;
+        font-size: 18px;
+        color: $subColor;
+    }
+    .work-img{
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+            @include transition(transform)
+        }
+        .overlay{
+            @include overlay;
+            background-color: rgba(black, .7);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s, visibility .4s;
+            .over{
+                @include overlay;
+                width: 90%;
+                h3{
+                    font-size:25px
+                }
+                span{
+                    font-size:13px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+            .overlay{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+/*work*/
+/*about*/
+.about{
+    padding: 40px 0;
+    background-color: #000000;
+    padding: 25px;
+    width: 85%;
+    margin: auto;
+    .about-img{
+        img{
+            width: 100%;
+        }
+    }
+    .about-content{
+        h3{
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+        p{
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: $subColor;
+        }
+        a{
+            text-decoration: underline;
+            color: white;
+            font-size: 15px;
+        }
+    }
+}
+/*about*/
+/*testimonials*/
+.testimonials{
+    padding: 80px 0;
+    .item{
+        padding: 0 80px;
+        h4{
+            line-height:2;
+            color: $subColor;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: normal;
+        }
+        img{
+            width: 5%;
+            margin: auto;
+            display: inline-block;
+            border-radius: 50%;
+        }
+    }
+
+}
+.owl-theme .owl-dots .owl-dot {
+    outline: 0;
+}
+
+/*testimonials*/
+/*services*/
+.services{
+    padding: 60px 0;
+    border-bottom: 1px solid #dee2e6;
+    .serv-icon{
+        color: $mainColor;
+        font-size: 38px;
+    }
+    .serv-title{
+        @extend %title;
+    }
+    .serv-desc{
+        @extend %description
+    }
+    .serv-link{
+        @extend %link
+    }
+}
+/*services*/
+/*about Us*/
+.aboutUs{
+    padding: 80px 0;
+    .info-title{
+        font-size: 40px;
+    }
+    .info-desc{
+        font-size: 18px;
+        line-height: 2;
+        color: $subColor;
+    }
+    .row.part-2{
+        margin-bottom: 3%;
+        h3{
+            @extend %title;
+            font-size: 19px;
+        }
+        p{
+            @extend %description
+        }
+        a{
+            @extend %link
+        }
+    }
+    .info-img{
+        img{
+            width: 100%;
+        }
+    }
+}
+/*about Us*/
+/*team*/
+.team{
+    padding: 60px 0;
+    border-bottom: 1px solid #dee2e6;
+    img{
+        width: 45%;
+        border-radius: 50%;
+        margin-bottom: 2%;
+    }
+    .team-title{
+        @extend %title;
+        margin-bottom: 1%;
+    }
+    .team-info{
+        font-size: 10px;
+        color: #ccc;
+        margin-bottom: 2%;
+        display: block;
+    }
+    .team-desc{
+        @extend %description
+    }
+    .team-social{
+        margin-bottom: 10%;
+        span{
+            padding: 0 3px;
+            a{
+                text-decoration: none;
+                color: white;
+                background-color: $thirtColor;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 50%;
+                opacity: .7;
+                font-size: 14px;
+                @include transition(opacity)
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+/*team*/
+/*blog*/
+.blog{
+    padding: 60px 10px;
+    .blog-content{
+        .blog-img{
+            img{
+                width: 100%;
+            }
+        }
+        .blog-title{
+            a{
+                @extend %title;
+                color: $mainColor;
+                text-decoration:none;
+                @include transition(color);
+
+                &:hover{
+                    color: #46aa9e;
+                }
+            }
+        }
+        .blog-info{
+            color: $subColor;
+            font-size: 13px;
+            a{
+                color: $mainColor;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+                @include transition(color)
+                &:hover{
+                    color: #46aa9e;
+                }
+            }
+        }
+        .blog-desc{
+            @extend %description
+        }
+        .blog-link{
+            @extend %link
+        }
+    }
+}
+/*blog*/
+/*contact*/
+.contact{
+    padding: 60px 0;
+    .contact-content{
+        background-color: white;
+        padding: 20px 25px;
+
+       form{
+        .form-control{
+            border-radius: 20px !important;
+            &:focus{
+                box-shadow: none;
+                border: 1px solid $mainColor;
+            }
+        }
+        .btn{
+            background-color: $mainColor;
+            color: white;
+            border-radius: 20px;
+            font-size: 15px;
+            padding: 10px 15px;
+            @include transition(colbackground-color);
+            &:hover{
+                background-color: #46aa9e;
+            }
+        }
+        #emailHelp{
+            display: none;
+        }
+       }
+       
+    }
+    .contact-information{
+        background-color: white;
+        padding: 20px 25px;
+        p.contact-information-info{
+            @extend %description;
+        }
+        p{
+            margin-bottom: 2%;
+            a{
+                @extend %link;
+                &:hover{
+                    color: #46aa9e;
+                }
+            }
+        }
+    }
+}
+/*contact*/

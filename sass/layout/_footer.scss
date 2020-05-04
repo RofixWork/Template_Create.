@@ -1,0 +1,68 @@
+footer{
+    padding: 80px 0;
+    background-color: #333;
+    .row{
+        border-bottom: 1px solid #dee2e6;
+        h4{
+            font-size: 16px;
+        }
+        p{
+            @extend %description
+        }
+        ul{
+            li{
+                line-height: 2.3;
+                a{
+                    color: $subColor;
+                    font-size: 15px;
+                    @include transition(color);
+                    &:hover{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .social{
+            span{
+                i{
+                    color: $subColor;
+                    padding: 0 6px;
+                    @include transition(color);
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+        .input-group{
+            .form-control{
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-color: $subColor;
+                
+                &:focus{
+                    box-shadow: none;
+                }
+    
+            }
+            .btn{
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: $mainColor;
+                color: white;
+                @include transition(colbackground-color);
+                &:hover{
+                    background-color: #46aa9e;
+                }
+            }
+        }
+    }
+    .copy{
+        color: #737373;
+        font-size: 15px;
+        strong{
+            color: $mainColor;
+        }
+    }
+}

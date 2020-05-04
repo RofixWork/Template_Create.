@@ -1,0 +1,30 @@
+//prefixer
+
+@mixin prefixer($prop, $val, $prefix: ()) {
+    @each $p in $prefix {
+        #{'-' + $p + '-' + $prop} : $val;
+    }
+    $prop : $val;
+}
+
+//overlay
+
+@mixin overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//transition
+
+@mixin transition($property) {
+    transition: $property .4s;
+}
+
+//media
+@mixin Md {
+    @media (max-width:991px) {
+        @content;
+    }
+}

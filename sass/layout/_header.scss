@@ -1,0 +1,153 @@
+/*ficxed menu*/
+.fixed-menu{
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    .fa-close{
+        position: absolute;
+        top: 20px;
+        right: 14px;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        opacity: .8;
+        @include transition(opacity)
+        &:hover{
+            opacity: 1;
+        }
+    }
+    ul{
+        text-align: center;
+        margin: 6% 0;
+        li{
+            line-height: 3;
+            border-bottom: 1px solid white;
+            a{
+                display: block;
+                color: white;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-size: 16px;
+                @include transition(color)
+                &:hover{
+                    color: $mainColor;
+                }
+                &.active{
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+    .social{
+        text-align: center;
+        margin: 1% 0;
+        a.link-list{
+            display: inline-block;
+            padding: 0 3%;
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            @include transition(color)
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+}
+/*ficxed menu*/
+/*information*/
+.info{
+    background-color: $fourColor;
+    p{
+        strong{
+            font-size: 15px;
+        }
+        a{
+            text-decoration: none;
+            color: $mainColor;
+            font-size: 14px;
+        }
+    }
+    .social-media{
+        a{
+            display: inline-block;
+            padding: 0 8px;
+            color: $mainColor;
+        }
+    }
+}
+/*information*/
+
+
+/*header*/
+header{
+    padding: 10px 0;
+    position: relative;
+    height: 70px;
+    .icon{
+        position: absolute;
+        top: 22px;
+        right: 57px;
+        display: none;
+        .fa-bars{
+            font-size: 27px;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+    .logo{
+        float: left;
+        width: 30%; 
+        margin: 7px 0;
+        h2{
+            a{
+                text-decoration: none;
+                color: black;
+                user-select: none;
+                span{
+                    color: $mainColor;
+                }
+            }
+        }      
+    }
+    .list{
+        float: left;
+        width: 70%;
+        text-align: right;
+        margin: 5px 0;
+        li{
+            display: inline-block;
+            a{
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: 10px 15px;
+                display: block;
+                color: $thirtColor;
+                font-size: 16px;
+                font-weight: 500;
+                @include transition(color)
+                &:hover{
+                    color: $mainColor;
+                }
+                &.active{
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+    @include Md{
+        .list{
+            display: none;
+        }
+        .icon{
+            display: block;
+        }
+
+    }
+}
+
+/*header*/

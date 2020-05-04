@@ -1,0 +1,14 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/extend';
+
+
+@import 'layout/header';
+@import 'components/heading';
+@import 'pages/globalPages';
+@import 'pages/homepages';
+
+
+
+
+@import 'layout/footer';

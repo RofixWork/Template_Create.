@@ -1,0 +1,6 @@
+*{
+    @include prefixer(box-sizing, border-box, webkit moz o);
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
